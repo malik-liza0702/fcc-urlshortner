@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -7,9 +6,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const dns = require('node:dns');
 
-console.log('MONGO_URI:', process.env.DB_URL);
+console.log('MONGO_URI:', "mongodb://localhost:27017/free");
 
-mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://localhost:27017/free", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.error('MongoDB connection error:', err));
 
