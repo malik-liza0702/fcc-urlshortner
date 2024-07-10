@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -25,7 +26,6 @@ let URLModel = mongoose.model("url", URLSchema);
 // Middleware function to parse post requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-
 app.use('/public', express.static(`${process.cwd()}/public`));
 
 app.get('/', function (req, res) {
